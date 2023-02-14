@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Markes</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <table class="table--content">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Genero</th>
+                <th>País</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="{picture,name,gender,location} in data">
+                <td><img :src="picture.thumbnail" :alt="name.firts" class=""></td>
+                <td >{{`${name.first} ${name.last}`}}</td>
+                <td>{{gender}}</td>
+                <td><img :src="findFlag(location.country)" :alt="location.country" class=""></td>
+               
+              </tr>
+
+            </tbody>
+          </table>
+         
+    </div>
+    
+    
+    <script src="./main.js"></script>
+</body>
+</html>
